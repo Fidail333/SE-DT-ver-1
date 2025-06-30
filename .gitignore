@@ -1,0 +1,7 @@
+.idea
+venv
+allure-results
+test_logs.log
+pytest_logs.log
+pytest.ini
+results
