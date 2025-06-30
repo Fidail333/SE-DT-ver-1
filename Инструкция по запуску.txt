@@ -11,7 +11,7 @@ pip install -r requirements.txt
 pytest -v включаешь
 
 
-pytest test/test_4655.py это пример как один тест запустить а всю пачку 
+pytest test/test_4655.py это пример как один тест запустить а всю не всю пачку 
 
 
 pytest -v -s --alluredir results это вместо с алюром 
