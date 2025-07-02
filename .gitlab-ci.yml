@@ -1,5 +1,6 @@
 pytest:
   stage: test
+  timeout: 48h
   image: python:3.10  # Базовый образ Python
   services:
     - name: selenium/standalone-chrome:latest  # Сервис с Chrome + ChromeDriver
