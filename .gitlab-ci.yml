@@ -26,5 +26,5 @@ pytest:
     # - echo $Browser, $Branch, $STAND, $Threads
   script:
     # - cd ./ren/
-    - ./allurectl watch -- pytest -v --headless=true --show-progress --alluredir=$ALLURE_RESULTS
+    - ./allurectl watch -- pytest -v -s --headless=true --alluredir $ALLURE_RESULTS
 
