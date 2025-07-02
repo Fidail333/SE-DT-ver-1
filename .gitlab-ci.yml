@@ -8,7 +8,7 @@ pytest:
     SELENIUM_HOST: selenium  # Хост Selenium (из сервиса)
     SELENIUM_PORT: 4444       # Порт Selenium-а
     ALLURE_ENDPOINT: https://testops.sport-express.ru
-    ALLURE_PROJECT_ID: 1
+    ALLURE_PROJECT_ID: 6
     ALLURE_RESULTS: /allure-results         # Папка с результатами
     Browser: chrome
     Branch: main
