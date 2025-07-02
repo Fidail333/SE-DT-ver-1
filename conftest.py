@@ -19,6 +19,11 @@ def browser():
     )
     options = Options()
     options.page_load_strategy="eager"
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")  # Решает проблему с /dev/shm
+    options.add_argument("--disable-gpu")  # Отключает GPU
+    options.add_argument("--headless=new")  # Для headless-режима
+    options.add_argument("--disable-software-rasterizer")
     service = Service()
     options.set_capability("goog:loggingPrefs", {"performance": "ALL", "browser": "ALL"})
     #options.add_argument('--headless')
