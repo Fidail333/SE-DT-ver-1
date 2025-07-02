@@ -1,0 +1,30 @@
+pytest:
+  stage: test
+  image: python:3.10  # Базовый образ Python
+  services:
+    - name: selenium/standalone-chrome:latest  # Сервис с Chrome + ChromeDriver
+      alias: selenium  # Алиас для подключения
+  variables:
+    SELENIUM_HOST: selenium  # Хост Selenium (из сервиса)
+    SELENIUM_PORT: 4444       # Порт Selenium-а
+    ALLURE_ENDPOINT: https://testops.sport-express.ru
+    ALLURE_PROJECT_ID: 1
+    ALLURE_RESULTS: /allure-results         # Папка с результатами
+    Browser: chrome
+    Branch: main
+    STAND: dev
+    Threads: 1
+
+
+
+  before_script:
+    # - echo "192.168.111.92 www.ren.env ren.env" >> /etc/hosts
+    - pip install pytest
+    - pip install -r requirements.txt
+    - curl -fsSL https://github.com/allure-framework/allurectl/releases/latest/download/allurectl_linux_amd64 -o allurectl
+    - chmod +x allurectl
+    # - echo $Browser, $Branch, $STAND, $Threads
+  script:
+    # - cd ./ren/
+    - ../allurectl watch -- pytest -v --headless=true --show-progress --alluredir=$ALLURE_RESULTS
+
