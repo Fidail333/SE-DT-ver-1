@@ -23,7 +23,7 @@ def browser():
     options.set_capability("goog:loggingPrefs", {"performance": "ALL", "browser": "ALL"})
     #options.add_argument('--headless')
     # browser = webdriver.Chrome(service=service, options=options)
-    browser = webdriver.Remote(command_executor="http://selenium:4444/wd/hub", service=service, options=options)
+    browser = webdriver.Remote(command_executor="http://selenium:4444/wd/hub", options=options)
     browser.maximize_window()
     yield browser
     browser.quit()
