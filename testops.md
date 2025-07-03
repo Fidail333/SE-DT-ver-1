@@ -9,7 +9,7 @@
     <details>
     <summary>▶️ Картинка</summary>
 
-    ![Страница кейсов](screenshots\choose_tests.png)
+    ![Страница кейсов](screenshots/choose_tests.png)
 
     </details>
 
@@ -20,7 +20,7 @@
     <details>
     <summary>▶️ Картинка</summary>
 
-    ![Страница кейсов](screenshots\start_job.png)
+    ![Страница кейсов](screenshots/start_job.png)
 
     </details>
 
@@ -30,6 +30,6 @@
     <details>
     <summary>▶️ Картинка</summary>
 
-    ![Страница кейсов](screenshots\job_started.png)
+    ![Страница кейсов](screenshots/job_started.png)
 
     </details> 
