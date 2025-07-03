@@ -15,3 +15,5 @@ pytest test/test_4655.py это пример как один тест запус
 
 
 pytest -v -s --alluredir results это вместо с алюром 
+
+Такие дела
